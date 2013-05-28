@@ -1,0 +1,17 @@
+[user]
+	name = ianoshen
+	email = scaly.iano@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[alias]
+	br = branch -a
+	cm = commit
+	co = checkout
+	df = diff
+    rt = remote -v
+	sdf = diff --staged
+	st = status
+[color]
+	ui = true
