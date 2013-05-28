@@ -5,7 +5,7 @@ plugins=(git osx)
 source $ZSH/oh-my-zsh.sh
 
 # based on https://gist.github.com/MattiSG/3076772
-function brewv() {
+function brv() {
     versions=$(brew versions $1)
     result=$(echo "$versions" | grep -m 1 $2) #-m 1 to stop as soon as possible
 
@@ -34,16 +34,27 @@ function brewv() {
     fi
 }
 
+# git squash
+function gsq() {
+    git reset --soft HEAD~$1 &&
+    git commit $2
+}
+
+bindkey -v
+
 export LANG="en_US.UTF-8"
 export DEV=$HOME/Documents/Projects
 export GOROOT=$DEV/go
 export GOBIN=$GOROOT/bin
+export GOPATH=$DEV/erebor-env
 export PYBIN=/usr/local/share/python
+export SVN_EDITOR=vi
 export PATH=$PATH:$GOBIN:$PYBIN
 
 alias dev="$DEV" 
-alias g="git"
+alias br="brew"
 alias ir="irssi"
+alias py="python"
 
 alias erebor-dev="ssh ianoshen@erebor-dev"
 alias erebor-svc="ssh ianoshen@erebor-svc"
