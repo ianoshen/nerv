@@ -7,3 +7,5 @@ set rnu
 
 map <right> :bn<cr>
 map <left> :bp<cr>
+
+inoremap $r ``<esc>i
