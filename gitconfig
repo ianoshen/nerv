@@ -6,12 +6,14 @@
 [merge]
 	tool = vimdiff
 [alias]
-	br = branch -a
+	br = branch
 	cm = commit
 	co = checkout
 	df = diff
-    rt = remote -v
+	rt = remote
 	sdf = diff --staged
 	st = status
 [color]
 	ui = true
+[credential]
+	helper = osxkeychain
